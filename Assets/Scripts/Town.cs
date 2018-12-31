@@ -12,6 +12,7 @@ public class Town : MonoBehaviour {
 
     public string townName;
     public Good product;
+    public List<Individual> individuals;
 
     void Start () {
 		
@@ -20,7 +21,7 @@ public class Town : MonoBehaviour {
 	void Update () {
 		
 	}
-    
+
     /**
      * Joel Seidel
      * Initialize the town product
@@ -28,6 +29,12 @@ public class Town : MonoBehaviour {
     public void init(string townName)
     {
         this.townName = townName;
+        initProduct();
+        initIndividuals();
+    }
+
+    private void initProduct()
+    {
         //Generate the random number which is the seed for the item to be created
         int productSeed = Random.Range(0, 3);
         string[] productSelections;
@@ -67,5 +74,18 @@ public class Town : MonoBehaviour {
         //Set the towns producing good value
         this.product = new Good(productSelections[productSeed], productsUtilities[productSeed]);
         Debug.Log("Created town : " + townName + " which produces: " + product.name + " with a utility value of: " + product.baseUtilityValue);
+    }
+    /**
+     * Joel Seidel
+     * Create the individuals for this town
+     */
+    private void initIndividuals()
+    {
+        individuals = new List<Individual>();
+        for(int i = 0; i < 25; i++)
+        {
+            individuals.Add(new Individual());
+            Debug.Log("Created a new individual. I am number: " + i);
+        }
     }
 }
