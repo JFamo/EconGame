@@ -18,6 +18,7 @@ public class Controller : MonoBehaviour {
      */
     void initTowns()
     {
+        towns = new List<GameObject>();
         //Town colors array
         string[] colors = { "Red", "Blue", "Green", "Yellow", "Black", "Beige" };
         //Create 6 towns
@@ -29,6 +30,8 @@ public class Controller : MonoBehaviour {
             Town thisTown = thisTownObj.AddComponent<Town>();
             //Initialize the town
             thisTown.init(colors[i]);
+            //Add the town gameobject to a list of all the towns
+            towns.Add(thisTownObj);
         }
     }
 
