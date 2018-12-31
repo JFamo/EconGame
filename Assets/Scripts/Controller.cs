@@ -18,6 +18,7 @@ public class Controller : MonoBehaviour {
      */
     void initTowns()
     {
+        towns = new List<GameObject>();
         //Town colors array
         string[] colors = { "Red", "Blue", "Green", "Yellow", "Black", "Beige" };
         //Create 6 towns
@@ -29,6 +30,58 @@ public class Controller : MonoBehaviour {
             Town thisTown = thisTownObj.AddComponent<Town>();
             //Initialize the town
             thisTown.init(colors[i]);
+            //Add the town gameobject to a list of all the towns
+            towns.Add(thisTownObj);
+        }
+    }
+
+    /**
+     * Joel Seidel
+     * Lookup function of product util from product name
+     */
+    public double getProductUtil(string productName)
+    {
+        //Lookup swithc for the utility value
+        switch (productName)
+        {
+            case "apples":
+                return 50;
+            case "fire trucks":
+                return 10;
+            case "red solo cups":
+                return 5;
+            case "fish":
+                return 60;
+            case "blueberries":
+                return 20;
+            case "water":
+                return 95;
+            case "grapes":
+                return 45;
+            case "trees":
+                return 90;
+            case "dollar bills":
+                return 15;
+            case "bananas":
+                return 65;
+            case "rubber ducks":
+                return 90;
+            case "corn":
+                return 15;
+            case "olives":
+                return 30;
+            case "tires":
+                return 50;
+            case "oil":
+                return 85;
+            case "corduroy pants":
+                return 20;
+            case "curtains":
+                return 10;
+            case "copper":
+                return 70;
+            default:
+                return -1;
         }
     }
 }
