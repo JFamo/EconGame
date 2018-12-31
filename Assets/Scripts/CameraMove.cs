@@ -34,7 +34,7 @@ public class CameraMove : MonoBehaviour {
 		{
 			camera.transform.Rotate(new Vector3(0,-15,0) * Time.deltaTime);
 		}
-		if (Input.GetKey(KeyCode.Escape))
+		if (Input.GetKey(KeyCode.Escape) && !myCam.enabled && !backEnabled && !cameraMoveEnabled)
 		{
 			myCam.enabled = true;
         	currentTownCam.enabled = false;
