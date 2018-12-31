@@ -31,4 +31,54 @@ public class Controller : MonoBehaviour {
             thisTown.init(colors[i]);
         }
     }
+
+    /**
+     * Joel Seidel
+     * Lookup function of product util from product name
+     */
+    public double getProductUtil(string productName)
+    {
+        //Lookup swithc for the utility value
+        switch (productName)
+        {
+            case "apples":
+                return 50;
+            case "fire trucks":
+                return 10;
+            case "red solo cups":
+                return 5;
+            case "fish":
+                return 60;
+            case "blueberries":
+                return 20;
+            case "water":
+                return 95;
+            case "grapes":
+                return 45;
+            case "trees":
+                return 90;
+            case "dollar bills":
+                return 15;
+            case "bananas":
+                return 65;
+            case "rubber ducks":
+                return 90;
+            case "corn":
+                return 15;
+            case "olives":
+                return 30;
+            case "tires":
+                return 50;
+            case "oil":
+                return 85;
+            case "corduroy pants":
+                return 20;
+            case "curtains":
+                return 10;
+            case "copper":
+                return 70;
+            default:
+                return -1;
+        }
+    }
 }
