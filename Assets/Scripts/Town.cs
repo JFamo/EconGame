@@ -41,7 +41,7 @@ public class Town : MonoBehaviour {
                 break;
             case "Blue":
                 productSelections = new string[] { "fish", "blueberries", "water" };
-                productsUtilities = new double[] { 60, 75, 95 };
+                productsUtilities = new double[] { 60, 20, 95 };
                 break;
             case "Green":
                 productSelections = new string[] { "grapes", "trees", "dollar bills" };
@@ -57,7 +57,7 @@ public class Town : MonoBehaviour {
                 break;
             case "Beige":
                 productSelections = new string[] { "corduroy pants", "curtains", "copper" };
-                productsUtilities = new double[] { 20, 10, 40 };
+                productsUtilities = new double[] { 20, 10, 70 };
                 break;
             default:
                 productSelections = new string[3];
@@ -66,5 +66,6 @@ public class Town : MonoBehaviour {
         }
         //Set the towns producing good value
         this.product = new Good(productSelections[productSeed], productsUtilities[productSeed]);
+        Debug.Log("Created town : " + townName + " which produces: " + product.name + " with a utility value of: " + product.baseUtilityValue);
     }
 }
