@@ -35,27 +35,27 @@ public class Town : MonoBehaviour {
         //Determine the town product and product utility based on the color of the town
         switch (townName)
         {
-            case "red":
+            case "Red":
                 productSelections = new string[] { "apples", "fire trucks", "red solo cups" };
                 productsUtilities = new double[] { 50, 10, 5 };
                 break;
-            case "blue":
+            case "Blue":
                 productSelections = new string[] { "fish", "blueberries", "water" };
                 productsUtilities = new double[] { 60, 75, 95 };
                 break;
-            case "green":
+            case "Green":
                 productSelections = new string[] { "grapes", "trees", "dollar bills" };
                 productsUtilities = new double[] { 45, 90, 15 };
                 break;
-            case "yellow":
+            case "Yellow":
                 productSelections = new string[] { "bananas", "rubber ducks", "corn" };
                 productsUtilities = new double[] { 65, 90, 30 };
                 break;
-            case "black":
+            case "Black":
                 productSelections = new string[] { "olives", "tires", "oil" };
                 productsUtilities = new double[] { 30, 50, 85 };
                 break;
-            case "beige":
+            case "Beige":
                 productSelections = new string[] { "corduroy pants", "curtains", "copper" };
                 productsUtilities = new double[] { 20, 10, 40 };
                 break;

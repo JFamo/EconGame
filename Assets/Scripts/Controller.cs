@@ -10,7 +10,6 @@ public class Controller : MonoBehaviour {
     private List<GameObject> towns;
 	void Start () {
         initTowns();
-
 	}
 
     /**
@@ -20,12 +19,12 @@ public class Controller : MonoBehaviour {
     void initTowns()
     {
         //Town colors array
-        string[] colors = { "red", "blue", "green", "yellow", "black", "beige" };
+        string[] colors = { "Red", "Blue", "Green", "Yellow", "Black", "Beige" };
         //Create 6 towns
         for (int i = 0; i < 6; i++)
         {
             //Define the empty game object to house the town monobehaviour script
-            GameObject thisTownObj = Instantiate(new GameObject("town-name: " + colors[i]));
+            GameObject thisTownObj = GameObject.Find(colors[i] + "Town");
             //Define the town mono object
             Town thisTown = thisTownObj.AddComponent<Town>();
             //Initialize the town
