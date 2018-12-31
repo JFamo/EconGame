@@ -81,9 +81,11 @@ public class Town : MonoBehaviour {
      */
     private void initIndividuals()
     {
+        //Init the individuals list
         individuals = new List<Individual>();
         for(int i = 0; i < 25; i++)
         {
+            //Add the created individual to the town listing
             individuals.Add(new Individual());
             Debug.Log("Created a new individual. I am number: " + i);
         }
