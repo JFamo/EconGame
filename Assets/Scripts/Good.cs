@@ -9,10 +9,15 @@ using System.Text;
  */
 namespace Assets.Scripts
 {
-    class Good
+    public class Good
     {
         public string name;
-        public int id;
         public double baseUtilityValue;
+        
+        public Good(string name, double baseUtilityValue)
+        {
+            this.name = name;
+            this.baseUtilityValue = baseUtilityValue;
+        }
     }
 }
