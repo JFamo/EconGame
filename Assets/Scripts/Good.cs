@@ -1,15 +1,14 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using UnityEngine;
 
-/**
+/*
  * Author: Joel Seidel
  * Good object
+ * Ruined by Joshua Famous
  */
-namespace Assets.Scripts
-{
-    public class Good
+
+	public class Good : MonoBehaviour
     {
         public string name;
         public double baseUtilityValue;
@@ -22,4 +21,3 @@ namespace Assets.Scripts
 			this.goodID = goodID;
         }
     }
-}

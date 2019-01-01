@@ -1,5 +1,4 @@
-﻿using Assets.Scripts;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,9 +12,9 @@ public class Town : MonoBehaviour {
     public string townName;
     public Good product;
     public List<Individual> individuals;
+	public static List<Good> goodList;
 
-    void Start () {
-		
+	void Start () {
 	}
 	
 	void Update () {
@@ -28,6 +27,7 @@ public class Town : MonoBehaviour {
      */
     public void init(string townName)
     {
+		goodList = new List<Good> ();
         this.townName = townName;
         initProduct();
         initIndividuals();
@@ -81,6 +81,7 @@ public class Town : MonoBehaviour {
         }
         //Set the towns producing good value
         this.product = new Good(productSelections[productSeed], productsUtilities[productSeed], goodID);
+		goodList.Add (product);
         Debug.Log("Created town : " + townName + " which produces: " + product.name + " with a utility value of: " + product.baseUtilityValue);
     }
     /**
