@@ -58,7 +58,7 @@ public class Individual : MonoBehaviour {
 		InvokeRepeating("DoTick", 2.0f,3.0f);
 	}
 
-	public void DoTick(){
+	void DoTick(){
 		Decay ();
 		Order ();
 	}
