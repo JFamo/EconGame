@@ -68,9 +68,8 @@ public class Individual : MonoBehaviour {
 		happy = eaten;
 	}
 
-	// FIXME - Get a reference for a market
 	// This function expects a way to
-	public void Order(/*Market market*/){
+	public void Order(){
 		int item_to_buy = -1;
 		double margin_if_bought = 0;
 		int item_to_sell = -1;
